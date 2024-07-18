@@ -14,7 +14,7 @@ function App() {
   }, []);
 
   const fetchPersons = async () => {
-    const response = await axios.get('${API_URL}/persons');
+    const response = await axios.get('https://backend-seven-ivory.vercel.app/persons');
     setPersons(response.data);
   };
 
@@ -23,7 +23,7 @@ function App() {
       await axios.put(`https://backend-seven-ivory.vercel.app/persons/${editIndex}`, { name, number });
       setEditIndex(null);
     } else {
-      await axios.post('${API_URL}/persons', { name, number });
+      await axios.post('https://backend-seven-ivory.vercel.app/persons', { name, number });
     }
     setName('');
     setNumber('');
