@@ -14,16 +14,16 @@ function App() {
   }, []);
 
   const fetchPersons = async () => {
-    const response = await axios.get('https://backend-seven-ivory.vercel.app/persons');
+    const response = await axios.get('${API_URL}/persons');
     setPersons(response.data);
   };
 
   const addPerson = async () => {
     if (editIndex !== null) {
-      await axios.put(`https://backend-seven-ivory.vercel.app/persons/${editIndex}`, { name, number });
+      await axios.put(`${API_URL}/persons/${editIndex}`, { name, number });
       setEditIndex(null);
     } else {
-      await axios.post('https://backend-seven-ivory.vercel.app/persons', { name, number });
+      await axios.post('${API_URL}/persons', { name, number });
     }
     setName('');
     setNumber('');
@@ -31,7 +31,7 @@ function App() {
   };
 
   const deletePerson = async (index) => {
-    await axios.delete(`https://backend-seven-ivory.vercel.app/${index}`);
+    await axios.delete(`${API_URL}/${index}`);
     fetchPersons();
   };
 
