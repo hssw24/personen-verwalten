@@ -7,7 +7,7 @@ function App() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [editIndex, setEditIndex] = useState(null);
-  const API_URL = 'https://backend.vercel.app';
+  const API_URL = 'personen-verwalten-dqzog4l70-hssw24s-projects.vercel.app';
 
   useEffect(() => {
     fetchPersons();
