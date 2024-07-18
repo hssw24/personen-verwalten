@@ -20,7 +20,7 @@ function App() {
 
   const addPerson = async () => {
     if (editIndex !== null) {
-      await axios.put(`${API_URL}/persons/${editIndex}`, { name, number });
+      await axios.put(`https://backend-seven-ivory.vercel.app/persons/${editIndex}`, { name, number });
       setEditIndex(null);
     } else {
       await axios.post('${API_URL}/persons', { name, number });
@@ -31,7 +31,7 @@ function App() {
   };
 
   const deletePerson = async (index) => {
-    await axios.delete(`${API_URL}/${index}`);
+    await axios.delete(`https://backend-seven-ivory.vercel.app/${index}`);
     fetchPersons();
   };
 
