@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './App.css';
+import React from "react";
 
+<<<<<<< HEAD
 function App() {
   const [persons, setPersons] = useState([]);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [editIndex, setEditIndex] = useState(null);
   const API_URL = 'http://localhost:5000/';
+=======
+>>>>>>> 220d28d0155f4b2ddc8a50821c55f401e0adea7f
 
-  useEffect(() => {
-    fetchPersons();
-  }, []);
+export default function HelloMessage() {
 
+<<<<<<< HEAD
   const fetchPersons = async () => {
     const response = await axios.get('${API_URL}/persons');
     setPersons(response.data);
@@ -73,4 +73,12 @@ function App() {
 }
 
 export default App;
+=======
 
+return <h1>Hello, World</h1>; 
+return <h1>Hello, World</h1>;
+return <h1>Hello, World xxx</h1>;
+
+>>>>>>> 220d28d0155f4b2ddc8a50821c55f401e0adea7f
+
+}
