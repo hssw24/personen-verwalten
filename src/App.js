@@ -39,7 +39,7 @@ export default function HelloMessage() {
 
   return (
     <div className="App">
-      <h1>Personen Verwalten</h1>
+      <h1>Personen verwalten</h1>
       <input 
         type="text" 
         placeholder="Name" 
@@ -53,7 +53,7 @@ export default function HelloMessage() {
         onChange={(e) => setNumber(e.target.value)} 
       />
       <button onClick={addPerson}>
-        {editIndex !== null ? 'Aktualisieren' : 'Hinzufügen'}
+        {editIndex !== null ? 'Aktualisieren' : '+ Hinzufügen'}
       </button>
       <ul>
         {persons.map((person, index) => (
