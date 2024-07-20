@@ -39,7 +39,7 @@ export default function HelloMessage() {
 
   return (
     <div className="App">
-      <h1>Personen verwalten</h1>
+      <h1>=== Personen verwalten ===</h1>
       <input 
         type="text" 
         placeholder="Name" 
