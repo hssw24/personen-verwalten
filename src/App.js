@@ -1,29 +1,25 @@
 import React from "react";
 
-<<<<<<< HEAD
 function App() {
   const [persons, setPersons] = useState([]);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [editIndex, setEditIndex] = useState(null);
   const API_URL = 'http://localhost:5000/';
-=======
->>>>>>> 220d28d0155f4b2ddc8a50821c55f401e0adea7f
 
 export default function HelloMessage() {
 
-<<<<<<< HEAD
   const fetchPersons = async () => {
-    const response = await axios.get('${API_URL}/persons');
+    const response = await axios.get('http://localhost:5000/persons');
     setPersons(response.data);
   };
 
   const addPerson = async () => {
     if (editIndex !== null) {
-      await axios.put(`${API_URL}/persons/${editIndex}`, { name, number });
+      await axios.put(`http://localhost:5000/persons/${editIndex}`, { name, number });
       setEditIndex(null);
     } else {
-      await axios.post('${API_URL}/persons', { name, number });
+      await axios.post('http://localhost:5000/persons', { name, number });
     }
     setName('');
     setNumber('');
@@ -31,7 +27,7 @@ export default function HelloMessage() {
   };
 
   const deletePerson = async (index) => {
-    await axios.delete(`${API_URL}/${index}`);
+    await axios.delete(`http://localhost:5000/${index}`);
     fetchPersons();
   };
 
@@ -73,12 +69,5 @@ export default function HelloMessage() {
 }
 
 export default App;
-=======
-
-return <h1>Hello, World</h1>; 
-return <h1>Hello, World</h1>;
-return <h1>Hello, World xxx</h1>;
-
->>>>>>> 220d28d0155f4b2ddc8a50821c55f401e0adea7f
 
 }
